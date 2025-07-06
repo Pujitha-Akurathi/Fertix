@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Sustainable</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="/static/sustainable/css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="/static/sustainable/css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="/static/sustainable/css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="/static/sustainable/images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="/static/sustainable/css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <!--[if lt IE 9]-->
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+      <style>
+ /* header section start */
+
+.header_section {
+    width: 100%;
+    z-index: 1;
+    float: left;
+    background-color: #f5f5f5;
+    background-image: url(/static/images/agro.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1px auto;
+    position: relative;
+    padding: 8px 0; /* Adds padding above and below the logo */
+    text-align: center;
+}
+a {
+    color: #1f1f1f;
+
+}
+.year_section {
+    position: relative;
+    z-index: 3; /* Ensure it is above the background image */
+    padding: 10px 0; /* Add some padding to give space */
+}
+
+.year_section_2 {
+    position: relative;
+    z-index: 4; /* Higher z-index to make it appear above the image */
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: add a semi-transparent background to the box */
+    padding: 20px; /* Padding inside the box */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+.year_taital {
+    font-size: 24px;
+    color: #333; /* Text color */
+    text-align: center;
+}
+
+.bg-light {
+    background-color: transparent !important;
+}
+
+.logo img {
+    width: 100px; /* Adjust size as needed */
+    height: auto; /* Maintains aspect ratio */
+    background-color: transparent; /* Ensure no background color */
+    border-radius: 2px; /* Optional: adds slight rounded corners */
+}
+
+/* Profile pic with login and register */
+.profile-icon {
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px;
+        }
+
+.profile-icon img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+/* Profile Card Styling */
+.profile-card {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    width: 200px;
+    background-color: #e9efea;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    z-index: 1000;
+}
+
+.profile-card img {
+    display: block;
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.profile-card h2 {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+/* Communication Button */
+.profile-card .communication {
+    display: block;
+    width: 75%;
+    padding: 5px;
+    margin-bottom: 10px;
+    color: #fff;
+    background-color: #87dc3c;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    alignment: center;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/* Button Group Styling */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-card .login, .profile-card .register {
+    flex: 1; /* Ensure both buttons are the same size */
+    padding: 5px;
+    width: 120%;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #87dc3c;
+    text-align: center;
+    margin: 0 5px; /* Add small spacing between buttons */
+
+}
+
+
+/* Profile Icon Styling */
+.profile-icon img {
+    width: 30px; /* Adjusted width */
+    height: 30px; /* Adjusted height */
+    border-radius: 50%; /* Circular shape */
+}
+
+/* Optional: Add a hover effect */
+.logo img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    transition: transform 0.3s ease-in-out;
+}
+
+.ml-auto,
+.mx-auto {
+    margin-left: auto!important;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding: 15px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: transparent;
+    margin-left: 10px;
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #77a01d;
+    background-color: #fefefd;
+}
+
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show>.nav-link {
+    color: #77a01d;
+    background-color: #fefefd;
+}
+
+.navbar {
+   background: none; /* Transparent background */
+    border: none;
+    padding: 0px 10px; /* Reduced padding to make the navbar more compact */
+    height: auto;
+   }
+
+.navbar-light .navbar-nav .nav-link {
+    padding: 15px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: transparent;
+    margin-left: 10px;
+}
+
+/* Dropdown menu container */
+.navbar .dropdown-menu {
+    background-color: #f8f9fa; /* Light gray background */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 0; /* Padding for the dropdown items */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+
+/* Dropdown menu items */
+.navbar .dropdown-menu .dropdown-item {
+    font-size: 18px; /* Font size */
+    color: #333; /* Text color */
+    padding: 10px 20px; /* Padding for each item */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for dropdown items */
+.navbar .dropdown-menu .dropdown-item:hover {
+    background-color: rgb(85, 128, 42); /* Blue background on hover */
+    color: white; /* White text on hover */
+    border-radius: 8px; /* Slight rounding for the hover effect */
+}
+
+/* Hover effect for dropdown container */
+.navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease;
+}
+
+/* For better alignment and positioning */
+.navbar .dropdown-menu .dropdown-item {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+}
+
+
+/** footer **/
+
+footer {
+     background-color: #1a1d1b;
+     color: #ffffff;
+     padding: 30px 0;
+ }
+
+ .footer_section {
+     padding: 18px 0;
+ }
+
+ .footer_section h2 {
+     color: #ffffff;
+     font-size: 20px;
+     margin-bottom: 20px;
+     font-weight: bold;
+
+ }
+
+ .footer_section_2 .row {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 20px;
+     font-weight: bold;
+
+ }
+
+ .footer_section_2 .col-lg-3 {
+     flex: 1;
+     min-width: 250px;
+     font-weight: bold;
+
+ }
+
+ /* Contact Info */
+ .contact_info a {
+     color: #ffffff;
+     display: block;
+     margin-bottom: 10px;
+     text-decoration: none;
+     transition: color 0.3s ease;
+ }
+
+ .contact_info a:hover {
+     color: #77a01d;
+ }
+
+ .contact_info i {
+     font-size: 18px;
+     margin-right: 10px;
+     font-weight: bold;
+
+ }
+
+ /* Social Icons */
+ .social_icon ul {
+     padding: 0;
+     margin: 0;
+     list-style: none;
+     display: flex;
+     gap: 10px;
+ }
+
+ .social_icon ul li a {
+     color: #e5e3e3;
+     font-size: 20px;
+     transition: color 0.3s ease;
+ }
+
+ .social_icon ul li a:hover {
+     color: #77a01d;
+ }
+
+ /* Useful Links */
+ .footer_menu ul {
+     list-style-type: none;
+     padding: 0;
+ }
+
+ .footer_menu ul li {
+     margin-bottom: 3px;
+ }
+
+ .footer_menu ul li a {
+     color: #ffffff;
+     font-size: 16px;
+     text-decoration: none;
+     display: block;
+     transition: color 0.3s ease;
+ }
+
+ .footer_menu ul li a:hover {
+     color:#77a01d;
+ }
+
+ .footer_menu ul li.active a {
+     color:#77a01d;
+     font-weight: bold;
+ }
+
+ /* About Section */
+ .about_text {
+     color: #ffffff;
+     font-size: 16px;
+     line-height: 1.5;
+ }
+
+ /* Subscribe Section */
+ .subscribe_container {
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+ }
+
+ .email_input {
+     padding: 10px;
+     border: none;
+     border-radius: 4px;
+     font-size: 16px;
+     width: 100%;
+ }
+
+
+.update_mail {
+    color: #ffffff;
+    width: 100%;
+    height: 55px;
+    font-size: 18px;
+    padding: 10px 20px 0px 20px;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    margin-top: 20px;
+}
+
+textarea#comment.update_mail::placeholder {
+    color: #ffffff;
+}
+
+.subscribe_bt {
+    width: 140px;
+    float: left;
+    padding-top: 30px;
+}
+
+.subscribe_bt a {
+    width: 100%;
+    float: left;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px 0px;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.subscribe_bt a:hover {
+    color: #85a900;
+    background-color: transparent;
+}
+
+/* Footer Section H2 Styling */
+.footer_section h2 {
+    font-size: 25px; /* Increase the font size */
+    font-weight: bold; /* Make the heading bold */
+    color: #ffffff; /* Keep the color as white */
+    margin-bottom: 15px; /* Adjust the spacing under the heading */
+}
+
+/** end footer **/
+      </style>
+   </head>
+   <body>
+   <header>
+
+       <!-- header section start -->
+       <div class="header_section">
+         <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <div class="logo"><a href="/"><img src="/static/images/logo/logo-transparent-png.png"></a></div>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                     <li class="nav-item active">
+                        <a class="nav-link" href="/">Home</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Predict
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/fert_predict" >Fertilizer</a>
+                            <a class="dropdown-item" href="/crop_predict" >Crop</a>
+                        </div>
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Informative
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/crop" >Crop Stages</a>
+                            <a class="dropdown-item" href="/fertilizers" >Fertilizers</a>
+                            <a class="dropdown-item" href="/sustainable" >Agroecology</a>
+                        </div>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact Us</a>
+                     </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/news">News</a>
+                     </li>
+                      <li>
+                          <!-- Profile Icon -->
+                          <div class="profile-icon" id="profile-icon">
+                              <img src="/static/images/profileicon7.png" alt="Profile icon">
+                          </div>
+                          <!-- Profile Card -->
+                          <div class="profile-card" id="profile-card">
+                            <img src="/static/images/farmer.png" alt="User Image">
+                            <h2>Farmer</h2>
+                      <div class="button-group">
+                                <a class="nav-link" href="/acountlogin">
+                                    <button class="login">Login</button>
+                                </a>
+                            </div>
+                            <div class="button-group">
+                                <a href="/communication">
+                                    <button class="communication">Communication</button>
+                                </a>
+                            </div>
+
+                        </div>
+
+                      </li>
+                  </ul>
+               </div>
+            </nav>
+         </div>
+      </div>
+   </header>
+   <!-- body -->
+    <main>
+   <class="main-layout">
+ <h1 align="center"style="font-size: 60px; color: #77a01d; line-height: 62px;font-weight: bold;padding-top: 140px;font-family: 'Times New Roman', Times, serif;">Sustainable Farming</h1>
+      <!-- three_box -->
+      <!-- hottest -->
+      <div  class="hottest">
+         <div class="container">
+            <div class="row d_flex">
+               <div class="col-md-5">
+                  <div class="titlepage">
+                     <h2 class="animate-text">What is <br>Sustainable Farming?</h2>
+                     </div>
+               </div>
+               <div class="col-md-7">
+                  <div class="hottest_box">
+                     <p class="animate-paragraph">
+                        Sustainable farming is an agricultural approach that prioritizes long-term environmental health while ensuring consistent food production. Key practices include crop rotation, organic composting, and reduced use of synthetic fertilizers, all aimed at improving soil health and conserving natural resources like water. This method fosters biodiversity, recycles organic matter, and supports local communities by encouraging smaller-scale, eco-friendly food production. Additionally, sustainable farming reduces greenhouse gas emissions and enhances farms' resilience to climate change, ensuring agricultural productivity without damaging the environment.
+                        Sustainable farming also promotes the use of renewable energy sources, such as solar and wind power, to further reduce the environmental footprint of agricultural practices.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      </div>
+      </div>
+      <!-- end hottest -->
+      <!-- choose  section -->
+      <div class="choose ">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-8">
+                  <div class="titlepage">
+                     <h2 class="animate-text">Sustainable Farming Techniques </h2>
+                     <p></p>
+                     <p></p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="container-fluid">
+            <div class="row d_flex">
+               <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12">
+                  <div class="padding_with">
+                     <div class="row">
+                        <div class="col-md-6 padding_bottom">
+                           <div class="choose_box">
+                              <i><img src="/static/sustainable/images/icon1.png" alt="#"/></i>
+                              <div class="choose_text">
+                                 <h3>Rotational Grazing</h3>
+                                 <p>Rotational grazing involves moving livestock between different pasture areas to prevent overgrazing. This practice promotes soil regeneration, improves pasture productivity, and enhances biodiversity.</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-6 padding_bottom">
+                           <div class="choose_box">
+                              <i><img src="/static/sustainable/images/icon2.png" alt="#"/></i>
+                              <div class="choose_text">
+                                 <h3>Organic Fertilizer Use</h3>
+                                 <p>Organic fertilizers, derived from natural sources like compost and manure, enrich the soil without harmful chemicals. They improve soil health and promote long-term fertility by enhancing nutrient availability.</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-6 padding_bottom2">
+                           <div class="choose_box">
+                              <i><img src="/static/sustainable/images/pesticide.png" alt="#"/></i>
+                              <div class="choose_text">
+                                 <h3>Precision Agriculture</h3>
+                                 <p>Precision agriculture uses technology such as sensors and GPS to monitor crop needs and optimize input usage. It reduces waste, increases yields, and ensures efficient use of resources like water and fertilizer.</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-6 padding_bottom2">
+                           <div class="choose_box">
+                              <i><img src="/static/sustainable/images/pesticide.png" alt="#"/></i>
+                              <div class="choose_text">
+                                 <h3>Conservation Tillage</h3>
+                                 <p> Conservation tillage minimizes soil disturbance by reducing the frequency of plowing. This helps preserve soil structure, reduce erosion, and retain moisture, contributing to improved crop growth.</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-6 padding_bottom2">
+                           <div class="choose_box">
+                              <i><img src="/static/sustainable/images/pesticide.png" alt="#"/></i>
+                              <div class="choose_text">
+                                 <h3>Agroforestry</h3>
+                                 <p> Agroforestry integrates trees and shrubs into agricultural landscapes to create more diverse ecosystems. It improves biodiversity, enhances soil fertility, and provides additional income through timber or fruit production.</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="choose_box">
+                              <i><img src="/static/sustainable/images/icon4.png" alt="#"/></i>
+                              <div class="choose_text">
+                                 <h3>Pest Management</h3>
+                                 <p>Pest Management uses natural predators and crop rotation to control pests, reducing the need for chemical pesticides. This helps maintain healthier ecosystems and sustainable farming practices.</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
+                  <div class="choose_img">
+                     <figure><img src="/static/sustainable/images/7jobdiui.png" alt="#"/></figure>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="container">
+            <div class="row">
+               <div class="col-md-5">
+                  <a class="read_more" href="https://eos.com/blog/sustainable-agriculture/">Read More</a>
+               </div>
+            </div>
+         </div>
+      </div>
+      </div>
+      <!-- end choose  section -->
+
+      <!-- end product  section -->
+      <!-- about -->
+      <div class="about">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2>Principles of Sustainable Agriculture</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <div id="myCarousel" class="carousel slide about_Carousel " data-ride="carousel">
+                     <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                        <li data-target="#myCarousel" data-slide-to="4"></li>
+                        <li data-target="#myCarousel" data-slide-to="5"></li>
+                     </ol>
+                     <div class="carousel-inner">
+                        <div class="carousel-item active">
+                           <div class="container">
+                              <div class="carousel-caption ">
+                                 <div class="row">
+                                    <div class="col-md-12">
+                                       <div class="test_box">
+                                          <i><img src="/static/sustainable/images/soil1.png" alt="#"/></i>
+                                          <h4>Soil Health Preservation</h4>
+                                          <p>Soil health is the foundation of sustainable farming, emphasizing practices that improve soil structure, fertility, and biodiversity. Maintaining a balanced ecosystem within the soil promotes the growth of beneficial microorganisms, which contribute to nutrient cycling and plant health. Techniques like crop rotation, reduced tillage, and organic composting help preserve soil integrity, preventing erosion and degradation. Healthy soil retains moisture better, which reduces the need for irrigation. It also stores more carbon, contributing to climate change mitigation. By minimizing chemical inputs, farmers can avoid disrupting soil biology. Sustainable soil management ensures long-term productivity and reduces environmental impact.</p>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="carousel-item">
+                           <div class="container">
+                              <div class="carousel-caption">
+                                 <div class="row">
+                                    <div class="col-md-12">
+                                       <div class="test_box">
+                                          <i><img src="/static/sustainable/images/water.png" alt="#"/></i>
+                                          <h4>Water Conservation</h4>
+                                          <p>Water conservation is crucial in sustainable farming to ensure that this vital resource is used efficiently and responsibly. Practices like drip irrigation, rainwater harvesting, and mulching help minimize water waste and optimize usage. Reducing runoff and improving soil moisture retention can significantly lower the amount of water needed for crops. Efficient water use not only saves costs but also protects local water sources from depletion and pollution. Sustainable water management also reduces the risk of drought-related crop failures. By aligning water use with local climate patterns, farmers can ensure the long-term viability of their agricultural practices.
+                                          </p>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="carousel-item">
+                           <div class="container">
+                              <div class="carousel-caption">
+                                 <div class="row">
+                                    <div class="col-md-12">
+                                       <div class="test_box">
+                                          <i><img src="/static/sustainable/images/d.png" alt="#"/></i>
+                                          <h4>Biodiversity</h4>
+                                          <p>Biodiversity in farming systems enhances resilience and productivity by promoting ecological balance. Incorporating diverse plant species, both crops and cover crops, improves soil health, reduces pest outbreaks, and boosts pollinator activity. Biodiversity also supports ecosystem services such as nutrient cycling and water regulation. Agroforestry, where trees are integrated with crops, is one example of enhancing biodiversity. Diverse farming systems are more adaptable to climate variability and reduce reliance on chemical inputs. By fostering a variety of species, sustainable farms create healthier environments for wildlife, which in turn benefits the agricultural system.</p>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     <div class="carousel-item">
+                        <div class="container">
+                           <div class="carousel-caption">
+                              <div class="row">
+                                 <div class="col-md-12">
+                                    <div class="test_box">
+                                       <i><img src="/static/sustainable/images/water.png" alt="#"/></i>
+                                       <h4>Chemical Reduction</h4>
+                                       <p>Reducing chemical inputs, such as synthetic fertilizers and pesticides, is vital for sustainable farming. Excessive chemical use can lead to soil degradation, water contamination, and loss of biodiversity. Instead, sustainable practices promote organic alternatives, biological pest control, and integrated pest management (IPM). By using natural predators, crop rotations, and resistant crop varieties, farmers can effectively manage pests and diseases without harming the environment. Reducing reliance on synthetic chemicals also protects pollinators and other beneficial organisms. Sustainable farms focus on enhancing natural processes, ensuring that chemicals are a last resort and used only when absolutely necessary.
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="carousel-item">
+                        <div class="container">
+                           <div class="carousel-caption">
+                              <div class="row">
+                                 <div class="col-md-12">
+                                    <div class="test_box">
+                                       <i><img src="/static/sustainable/images/water.png" alt="#"/></i>
+                                       <h4>Energy Conservation</h4>
+                                       <p>Energy conservation in sustainable farming focuses on reducing fossil fuel use and increasing energy efficiency. By adopting renewable energy sources like solar and wind power, farmers can lower their carbon footprint. Efficient machinery and optimized transportation methods also play a critical role in conserving energy. Reducing energy-intensive inputs, such as synthetic fertilizers and pesticides, contributes to energy savings. Farmers can implement smart energy management systems to track and minimize usage. Sustainable energy practices lower operating costs, reduce greenhouse gas emissions, and contribute to the overall sustainability of farming operations.
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="carousel-item">
+                        <div class="container">
+                           <div class="carousel-caption">
+                              <div class="row">
+                                 <div class="col-md-12">
+                                    <div class="test_box">
+                                       <i><img src="/static/sustainable/images/water.png" alt="#"/></i>
+                                       <h4>Waste Minimization</h4>
+                                       <p>Waste minimization is a core principle of sustainable farming, ensuring that resources are used efficiently and excess is repurposed. Farmers can reduce waste through composting organic materials, recycling farm equipment, and utilizing by-products like crop residues for animal feed or bioenergy. Minimizing packaging and single-use materials also helps lower the environmental footprint. Efficient resource management ensures that little goes to waste, promoting circular economies on farms. By focusing on waste reduction, farms not only reduce costs but also minimize their impact on landfills and ecosystems. This approach supports long-term environmental and economic sustainability.
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                     <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                     <span class="sr-only">Previous</span>
+                     </a>
+                     <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                     <span class="sr-only">Next</span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end about -->
+      </div>
+   </main>
+   <footer>
+      <div class="footer_section layout_padding">
+         <div class="container">
+             <div class="footer_section_2">
+                 <div class="row">
+                     <!-- Contact Us Section -->
+                     <div class="col-lg-3 col-sm-6">
+                         <h2 class="useful_text">Contact Us</h2>
+                         <div class="contact_info">
+                             <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i><span class="info_text">Location</span></a>
+                             <a href="#"><i class="fa fa-phone" aria-hidden="true"></i><span class="info_text">(+91) 9878767564</span></a>
+                             <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i><span class="info_text">fertix2024@gmail.com</span></a>
+                         </div>
+                         <div class="social_icon">
+                             <ul>
+                                 <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                             </ul>
+                         </div>
+                     </div>
+
+                     <!-- Useful Links Section -->
+                     <div class="col-lg-3 col-sm-6">
+                         <h2 class="useful_text">Useful Links</h2>
+                         <div class="footer_menu">
+                             <ul>
+                                 <li class="active"><a href="/">     Home</a></li>
+                                 <li><a href="/about">    About</a></li>
+                                 <li><a href="/fertilizers">    Fertilizers</a></li>
+                                 <li><a href="/fert_predict">    Fertilizer Predict</a></li>
+                                 <li><a href="/crop_predict">    Crop Predict</a></li>
+                                 <li><a href="/crop">    Crop Stages</a></li>
+                                 <li><a href="/contact">    Contact Us</a></li>
+                             </ul>
+                         </div>
+                     </div>
+                     <!-- About Section -->
+                     <div class="col-lg-3 col-sm-6">
+                         <h2 class="useful_text">About</h2>
+                         <p class="about_text">We provide farmers with the tools they need to make informed decisions, optimize resources, and grow healthier crops for a better future.</p>
+                     </div>
+                     <!-- Subscribe Section -->
+                     <div class="col-lg-3 col-sm-6">
+                         <h2 class="useful_text">Subscribe</h2>
+                         <div class="col-lg-3 col-sm-6">
+                           <div class="form-group">
+                              <textarea class="update_mail" placeholder="Enter Your Email" rows="5" id="comments" name="Enter Your Email"></textarea>
+                              <div class="subscribe_bt"><a href="#">Subscribe</a></div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+         </div>
+      </div>
+   </footer>
+      <!-- Javascript files-->
+      <script src="/static/sustainable/js/jquery.min.js"></script>
+      <script src="/static/sustainable/js/popper.min.js"></script>
+      <script src="/static/sustainable/js/bootstrap.bundle.min.js"></script>
+      <script src="/static/sustainable/js/jquery-3.0.0.min.js"></script>
+      <!-- sidebar -->
+      <script src="/static/sustainable/js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="/static/sustainable/js/custom.js"></script>
+   </body>
+</html>
+

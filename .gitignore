@@ -1,0 +1,8 @@
+.env
+__pycache__/
+*.pkl
+*.csv
+*.webp
+.idea/
+*.pyc
+static/images/com2.jpg

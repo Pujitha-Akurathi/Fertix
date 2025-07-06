@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Fertix</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="/static/css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="/static/images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="/static/css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- fonts -->
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+      <!-- owl stylesheets -->
+      <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Poppins:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+      <link rel="stylesheet" href="/static/css/owl.carousel.min.css">
+      <!--<link rel="stylesheet" href="/static/css/owl.theme.default.min.css">-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+      <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+	  <style>
+         .popup {
+             display: none;
+             position: fixed;
+             top: 0;
+             left: 0;
+             width: 100%;
+             height: 100%;
+             background-color: rgba(0, 0, 0, 0.5);
+             justify-content: center;
+             align-items: center;
+             z-index: 9999;
+         }
+     
+         .popup-content {
+             background-color: #f9f9f9; /* Light background for the popup */
+             padding: 20px;
+             border-radius: 8px; /* Slightly rounded corners */
+             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Lighter shadow */
+             width: 500px;
+             max-width: 80%;
+             text-align: left; /* Align text to the left */
+             position: relative;
+             border: 1px solid #d4e4d4; /* Light green border */
+         }
+     
+         .popup-content h2 {
+             margin-top: 15px;
+             color: rgb(0, 100, 0); /* Darker text color for headings */
+             font-size: 24px; /* Slightly larger heading font size */
+         }
+     
+         .popup-content ol {
+             padding-left: 20px;		/* Indentation for list items */
+         }
+     
+         .popup-content ol li {
+             margin: 1px 0;
+             text-align: left; /* Align list items to the left */
+             font-size: 16px;
+             color: #333; /* Darker text color for list items */
+           list-style-type: decimal;
+     
+         }
+     
+         .close-popup {
+             position: absolute;
+             top: 0px;
+             right: 10px; /* Adjusted position */
+             font-size: 30px; /* Larger cross mark */
+             cursor: pointer;
+             color: rgb(255, 0, 0); /* Red color for the cross mark */
+         }
+     
+         .close-popup:hover {
+             color: rgb(200, 0, 0); /* Darker red on hover */
+         }
+            .header_section .logo {
+                padding-bottom: -7px; /* Adjust as needed */
+            }
+
+            .header_section .banner_taital {
+                margin-top: 0; /* Adjust or add margin as needed */
+            }
+            .heading {
+              font-family: 'Quicksand', sans-serif;
+              margin: 0;
+              padding: 0;
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-color: #ffffff; /* Optional, for fallback */
+          }
+
+          .heading h1 {
+              top: 40px;
+              color: rgb(0, 100, 0);
+              text-align: center;
+              margin: 0 auto;
+              font-size: 40px;
+              font-weight: bold;
+          }
+
+          .soil h2, .crop h2, .weather h2{
+              text-align: center;
+              margin-top: 55px;
+              font-size: 24px;
+            color: #4caf50;
+
+          }
+
+          .info-list {
+              align-items: center;
+              list-style: none;
+              width: 100%;
+              margin: 30px auto;
+              padding: 0;
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              gap: 30px;
+              max-width: 1200px;
+          }
+
+          .info-list li {
+              text-align: left;
+              display: flex;
+              align-items: center;
+              background-color: white;
+              padding: 15px;
+              border-radius: 8px;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          }
+
+          .info-list img {
+              width: 40px;
+              height: 40px;
+              margin-right: 15px;
+          }
+
+          .info-list input[type="text"] {
+              flex: 1;
+              padding: 10px;
+              font-size: 16px;
+              border: 1px solid #ccc;
+              border-radius: 5px;
+              width: 100%
+          }
+
+          .info-list li input[type="text"]:focus {
+              outline: none;
+              border-color: green;
+          }
+
+          .submit-section {
+              text-align: center;
+              width: 100%;
+              margin: 40px auto;
+              padding: 10px;
+          }
+
+          .submit-section button{
+              font: inherit;
+              background-color: rgb(6, 124, 6);
+              color: white;
+              border-radius: 4px;
+              border: 1px solid white;
+              padding: 0.5rem 8rem;
+              cursor: pointer;
+          }
+
+          .submit-section button:hover{
+              background-color: rgb(3, 85, 3);
+              border-color: rgb(3, 85, 3);
+          }
+
+
+        .pred_box {
+            padding: 20px;
+            margin: 50px auto;
+            background-color: #f9fcf7;
+            border: 2px solid #4CAF50; /* Green solid border */
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            width: 100%; /* Default width that scales with screen size */
+            max-width: 1500px; /* Maximum width on larger screens */
+            transition: transform 0.3s ease; /* Smooth scaling effect */
+            margin-left: 5%; /* Adjust position towards center */
+            margin-right: auto; /* Auto-adjust to align to the left a bit */
+        }
+
+        .pred_box:hover {
+            transform: scale(1.02); /* Slight zoom effect on hover */
+        }
+
+        /* Media Query for Small Screens */
+        @media (max-width: 768px) {
+            .pred_box {
+                width: 95%; /* Take up more width on smaller screens */
+                margin-left: 2.5%; /* Center it better on smaller screens */
+                margin-right: auto;
+            }
+        }
+
+        /* Media Query for Extra Small Screens */
+        @media (max-width: 576px) {
+            .pred_box {
+                width: 100%; /* Full width for extra small screens */
+                padding: 15px; /* Adjust padding for smaller devices */
+                margin: 20px auto; /* Center on very small screens */
+            }
+        }
+
+
+        @media (min-width: 576px) {
+            .info-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 768px) {
+            .info-list {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+
+
+   /*----------------- Voice Bot ----------------*/
+
+
+    /* Floating Icon */
+    .floating-icon {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: rgb(108, 187, 60);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .floating-icon img {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Chat Panel */
+    .chat-panel {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 350px; /* Set fixed width */
+        height: 500px; /* Set fixed height */
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        display: none;
+        flex-direction: column;
+        z-index: 1000;
+    }
+
+
+    .chat-header {
+        background-color: #28a745;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        font-size: 18px;
+        position: relative;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    /* Chat History */
+    .chat-history {
+        padding: 15px;
+        background-color: #f7f7f7;
+        overflow-y: auto;
+        flex-grow: 1;
+        max-height: 400px; /* Adjusted to fit within the fixed panel */
+    }
+
+    .chat-history .chat-bubble {
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background-color: #28a745;
+        color: white;
+        width: fit-content;
+    }
+
+    .chat-history .user-bubble {
+        background-color: #e0e0e0;
+        color: black;
+        align-self: flex-end;
+    }
+
+    .chat-input {
+        display: flex;
+        padding: 10px;
+        background-color: #fff;
+        border-top: 1px solid #ccc;
+    }
+
+    .chat-input input {
+        flex-grow: 1;
+        padding: 8px;
+        border-radius: 20px;
+        border: 1px solid #ccc;
+        margin-right: 10px;
+    }
+
+    .send-btn, .mic-btn {
+        background-color: #28a745;
+        border: none;
+        padding: 8px 12px;
+        color: #fff;
+        border-radius: 20%;
+        cursor: pointer;
+        margin: 5px;
+    }
+
+    .mic-btn img {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Animation */
+    @keyframes slideUp {
+        from {
+            opacity: 0;
+            transform: translateY(100%);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .chat-panel.show {
+        display: flex;
+        animation: slideUp 0.5s ease-in-out;
+    }
+    /* Hover effect for the floating button */
+#voiceRecorderBtn {
+    background-color: #28a745; /* Green theme for Fertix */
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+          .recording-icon {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+      </style>
+
+   </head>
+   <body>
+      <!-- translation -->
+	  <div id="google_element" align="right"></div>
+      <!-- header section start -->
+      <div class="header_section">
+         <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <div class="logo"><a href="/"><img src="/static/images/logo/logo-transparent-png.png"></a></div>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                     <li class="nav-item active">
+                        <a class="nav-link" href="/">Home</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Predict
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/fert_predict" >Fertilizer</a>
+                            <a class="dropdown-item" href="/crop_predict" >Crop</a>
+                        </div>
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Informative
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/crop" >Crop Stages</a>
+                            <a class="dropdown-item" href="/fertilizers" >Fertilizers</a>
+                            <a class="dropdown-item" href="/sustainable" >Agroecology</a>
+                        </div>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact Us</a>
+                     </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/news">News</a>
+                     </li>
+                      <li>
+    <!-- Profile Icon -->
+    <div class="profile-icon" id="profile-icon">
+        <img src="/static/images/profileicon7.png" alt="Profile icon">
+    </div>
+    <!-- Profile Card -->
+    <div class="profile-card" id="profile-card">
+        <img src="/static/images/farmer.png" alt="User Image">
+        <h2>Farmer</h2>
+        <div class="button-group">
+            <a href="/acountlogin">
+                <button class="login">Login</button>
+            </a>
+            <a href="/communication">
+                <button class="communication">Communication</button>
+            </a>
+        </div>
+    </div>
+</li>
+
+                  </ul>
+               </div>
+            </nav>
+         </div>
+          <!-- header end -->
+         <!-- banner section start -->
+         <div class="banner_section layout_padding">
+            <section class="slide-wrapper">
+               <div class="container">
+                  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                     <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                     </ol>
+                     <div class="carousel-inner">
+                        <div class="carousel-item active">
+                           <div class="container">
+                              <div class="row">
+                                 <div class="col-sm-12">
+                                    <div class="banner_taital_main">
+                                       <h1 class="banner_taital">Fertilizer</h1>
+                                       <p class="banner_text">A fertilizer is a substance that is applied to soil or plant tissues to increase plant growth and productivity. Fertilizers can be natural or synthetic, and they can contain chemical elements like nitrogen, phosphorus, and potassium.</p>
+                                       <div class="btn_main">
+                                          <div class="started_text"><a href="/fert_predict">Predict</a></div>
+                                          <div class="started_text active"><a href="/contact">Contact Us</a></div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="carousel-item">
+                           <div class="container">
+                              <div class="row">
+                                 <div class="col-sm-12">
+                                    <div class="banner_taital_main">
+                                       <h1 class="banner_taital">Crop</h1>
+                                       <p class="banner_text">A crop is a plant or plant product grown and harvested for food, feed, fiber, or other uses. It includes grains, fruits, vegetables, and more, cultivated by farmers for consumption or commercial purposes.</p>
+                                       <div class="btn_main">
+                                          <div class="started_text active"><a href="/crop_predict">Predict</a></div>
+                                          <div class="started_text"><a href="/contact">Contact Us</a></div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="carousel-item">
+                           <div class="container">
+                              <div class="row">
+                                 <div class="col-sm-12">
+                                    <div class="banner_taital_main">
+                                       <h1 class="banner_taital">Agriculture</h1>
+                                       <p class="banner_text">Agriculture is the practice of cultivating soil, growing crops, and raising animals for food, fiber, and other products essential for human survival and economic gain. It involves various activities like farming, livestock rearing, and land management.</p>
+                                       <div class="btn_main">
+                                          <div class="started_text active"><a href="/about">About Us</a></div>
+                                          <div class="started_text"><a href="/contact">Contact Us</a></div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+         </div>
+         <!-- banner section end -->
+      </div>
+      <!-- header section end -->
+      <!-- year section start -->
+      <div class="year_section">
+         <div class="container">
+            <div class="year_section_2">
+               <div class="row">
+                  <div class="slogan_text">
+                     <div class="year_taital">Grow More, Grow Better with the Right Fertilizer.</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- year section end -->
+
+
+
+      <!-- -----------------Voice Bot------------------ -->
+
+        <!-- Floating Chat Icon -->
+        <div class="floating-icon" id="floatingIcon">
+            <img src="/static/images/assistant.png" alt="Chat" id="micIcon">
+        </div>
+
+        <!-- Chat Panel -->
+        <div class="chat-panel" id="chatPanel">
+            <div class="chat-header">
+                <span>Fertix Assistant</span>
+                <button class="close-btn" id="closeBtn">&times;</button>
+            </div>
+            <div class="chat-history" id="chatHistory">
+                <!-- Last 10 question-answer pairs will be shown here -->
+            </div>
+            <div class="chat-input">
+                <input type="text" id="chatInputText" placeholder="Type your message here...">
+                <button class="send-btn" id="sendBtn">Send</button>
+                <button class="mic-btn" id="micBtn">
+                    <img src="/static/images/mic1.png" alt="Record">
+                </button>
+
+            </div>
+        </div>
+
+      <!-- -------------Voice Bot end --------------- -->
+
+      <!-- services section start -->
+      <div class="services_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-12">
+                  <h1 class="services_taital">Fertilizers</h1>
+               </div>
+            </div>
+            <div class="services_section_2">
+               <div class="row">
+                  <div class="col-md-4">
+                     <div class="box_main active">
+                        <div class="service_img"><img src="static/images/fertilizers/urea.jpg"></div>
+                        <h4 class="development_text">Urea</h4>
+                        <p class="services_text">Urea is a fertilizer that provides plants with nitrogen, helping them grow stronger and healthier.</p>
+                        <div class="readmore_bt"><a href="#" class="open-popup" data-popup="#popup-urea">Read More</a></div>
+                     </div>
+                  </div>
+				  	<div class="popup" id="popup-urea">
+        <div class="popup-content">
+        <span class="close-popup">&times;</span>
+        <h2>Advantages</h2>
+        <ol>
+            <li>Promotes vigorous growth and higher yields.</li>
+            <li>Cost-effective and readily available.</li>
+            <li>Can be used for multiple crop types and soil conditions.</li>
+        </ol>
+        <h2>Disadvantages of Overuse:</h2>
+        <ol>
+            <li>Can lead to nitrogen leaching, polluting groundwater.</li>
+            <li>Excessive use can cause plant burn and reduced crop quality.</li>
+            <li>May increase greenhouse gas emissions and contribute to environmental pollution.</li>
+        </ol>
+        </div>
+    </div>
+              <div class="col-md-4">
+                 <div class="box_main">
+                    <div class="service_img"><img src="static/images/fertilizers/28-28.jpg"></div>
+                    <h4 class="development_text">28-28</h4>
+                    <p class="services_text">28-28 fertilizer contains 28% nitrogen and 28% phosphorus, supporting strong leaf and root growth in plants.</p>
+                    <div class="readmore_bt"><a href="#" class="open-popup" data-popup="#popup-28-28">Read More</a></div>
+                 </div>
+              </div>
+              <div class="popup" id="popup-28-28">
+                 <div class="popup-content">
+                    <span class="close-popup">&times;</span>
+                        <h2>Advantages</h2>
+                          <ol>
+                            <li>Provides a balanced supply of nitrogen and phosphorus, essential for plant growth and development.
+                             </li>
+                            <li>Supports robust root development and overall plant health.
+                          </li>
+                            <li>Enhances early growth and improves yields.
+                          </li>
+                          </ol>
+                        <h2>Disadvantages of Overuse:</h2>
+                          <ol>
+                             <li>Can cause nutrient imbalances if phosphorus accumulates in the soil.</li>
+                             <li>Excess application may lead to environmental issues such as runoff and water pollution.
+                             </li>
+                             <li>Overuse can contribute to soil acidity and may require additional lime to correct pH imbalance.
+                             </li>
+                          </ol>
+                 </div>
+              </div>
+                  <div class="col-md-4">
+                     <div class="box_main">
+                        <div class="service_img"><img src="static/images/fertilizers/dap.jpeg.jpg"></div>
+                        <h4 class="development_text">DAP</h4>
+                        <p class="services_text">DAP is a fertilizer rich in phosphorus and nitrogen that enhances root development and plant growth.</p>
+                        <div class="readmore_bt"><a href="#" class="open-popup" data-popup="#popup-dap">Read More</a></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="popup" id="popup-dap">
+               <div class="popup-content">
+                  <span class="close-popup">&times;</span>
+                <h2>Advantages</h2>
+                        <ol>
+                          <li>Supplies essential nutrients (nitrogen and phosphorus) that promote strong root development and overall plant health.
+                           </li>
+                          <li>Enhances early plant growth and improves crop yields.
+                        </li>
+                          <li>Helps in the development of flowers and fruits.
+                        </li>
+                        </ol>
+                      <h2>Disadvantages of Overuse:</h2>
+                        <ol>
+                           <li>Can lead to nutrient imbalances in the soil.
+                           </li>
+                           <li>Excess phosphorus can contribute to water pollution through runoff, causing algal blooms in water bodies.
+                           </li>
+                           <li>May result in soil acidification over time if used excessively.
+                           </li>
+                        </ol>
+               </div>
+            </div>
+            <div class="services_section_2">
+               <div class="row">
+                  <div class="col-md-4">
+                     <div class="box_main">
+                        <div class="service_img"><img src="static/images/fertilizers/20-20.jpg"></div>
+                        <h4 class="development_text">20-20</h4>
+                        <p class="services_text">20-20 fertilizer is balanced in nitrogen and phosphorus, promoting strong leaf growth and healthy roots.</p>
+                        <div class="readmore_bt"><a href="#" class="open-popup" data-popup="#popup-20-20">Read More</a></div>
+                     </div>
+                  </div>
+                  <div class="popup" id="popup-20-20">
+                     <div class="popup-content">
+                        <span class="close-popup">&times;</span>
+                      <h2>Advantages</h2>
+                              <ol>
+                                <li>Provides a balanced supply of nitrogen and phosphorus for healthy plant growth.
+                                 </li>
+                                <li>Enhances root development, flowering, and fruit production.
+                              </li>
+                              </ol>
+                            <h2>Disadvantages of Overuse:</h2>
+                              <ol>
+                                 <li>
+                                    Can cause nutrient imbalances and phosphorus buildup in the soil.                                    
+                                 </li>
+                                 <li>Excess phosphorus may lead to water pollution and algal blooms.
+                                 </li>
+                                 <li>Overuse can contribute to soil acidity, requiring additional lime to correct pH levels.
+                                 </li>
+                              </ol>
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <div class="box_main">
+                        <div class="service_img"><img src="static/images/fertilizers/17-17-17.jpg"></div>
+                        <h4 class="development_text">17-17-17</h4>
+                        <p class="services_text">17-17-17 fertilizer is balanced in nitrogen, phosphorus, and potassium, enhancing overall plant health and growth.</p>
+                        <div class="readmore_bt"><a href="#" class="open-popup" data-popup="#popup-17-17-17">Read More</a></div>
+                     </div>
+                  </div>
+                  <div class="popup" id="popup-17-17-17">
+                     <div class="popup-content">
+                        <span class="close-popup">&times;</span>
+                      <h2>Advantages</h2>
+                              <ol>
+                                <li>Provides a balanced supply of nitrogen and phosphorus for healthy plant growth.
+                                 </li>
+                                <li>Enhances root development, flowering, and fruit production.
+                              </li>
+                              </ol>
+                            <h2>Disadvantages of Overuse:</h2>
+                              <ol>
+                                 <li>
+                                    Can lead to nutrient imbalances and potential buildup of phosphorus and potassium in the soil.                           
+                                 </li>
+                                 <li>Excess application may cause nutrient runoff, leading to water pollution and algal blooms.
+                                 </li>
+                                 <li>Overuse can contribute to soil acidity, requiring lime to maintain pH balance.
+                                 </li>
+                              </ol>
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <div class="box_main">
+                        <div class="service_img"><img src="static/images/fertilizers/14-35-14.jpg"></div>
+                        <h4 class="development_text">14-35-14</h4>
+                        <p class="services_text">14-35-14 boosts root development and plant health with high phosphorus and balanced nitrogen and potassium.</p>
+                        <div class="readmore_bt"><a href="#" class="open-popup" data-popup="#popup-14-35-14">Read More</a></div>
+                     </div>
+                  </div>
+                  <div class="popup" id="popup-14-35-14">
+                     <div class="popup-content">
+                        <span class="close-popup">&times;</span>
+
+                          <h2>Advantages</h2>
+                          <ol>
+                            <li>High phosphorus content promotes strong root development and improves flowering and fruiting.
+                             </li>
+                            <li>Balanced with nitrogen and potassium to support overall plant health.
+                          </li>
+                          </ol>
+                        <h2>Disadvantages of Overuse:</h2>
+                          <ol>
+                             <li>
+                                Excess phosphorus can lead to nutrient imbalances and environmental pollution, causing algal blooms in water bodies.
+                             </li>
+                             <li>Overapplication may increase soil acidity and require additional lime to adjust pH levels.
+                             </li>
+                             <li>High phosphorus levels can lead to nutrient runoff and potential groundwater contamination.
+                             </li>
+                          </ol>
+                    </div>
+                    </div>
+
+      <!-- services section end -->
+
+<!-- about section start -->
+<div class="about_section layout_padding">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-6">
+            <h1 class="about_taital">About Us</h1>
+            <p class="about_text">At Fertix, we are committed to helping farmers boost crop productivity with smart, data-driven solutions. Our platform uses advanced machine learning to predict the best fertilizer type and quantity based on factors like soil health, crop type, and weather. Our goal is to make farming easier and more sustainable by offering personalized recommendations that improve yields while minimizing waste and environmental impact. With a focus on accuracy, simplicity, and sustainability, we provide farmers with the tools they need to make informed decisions, optimize resources, and grow healthier crops for a better future.</p>
+         </div>
+         <div class="col-md-6">
+            <div class="about_video">
+               <video controls width="100%">
+                  <source src="/static/images/track2.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+               </video>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- about section end -->
+
+      <!-- client section start -->
+      <div class="client_section layout_padding">
+         <div class="container">
+            <h1 class="client_taital">Crop Stages</h1>
+            <div class="client_section_2 layout_padding">
+               <div class="owl-carousel owl-theme">
+                  <div class="item">
+                     <div class="client_box">
+                        <div class="client_img"><img src="static/images/cycle/germination.png"></div>
+                        <h2 class="looking_text">Germination</h2>
+                        <p class="dummy_text">Germination is the initial stage where seeds sprout into seedlings, beginning the crop's life cycle. It requires optimal moisture, temperature, and soil quality for success.</p>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="client_box">
+                        <div class="client_img"><img src="static/images/cycle/seedling.png"></div>
+                        <h2 class="looking_text">Seedling</h2>
+                        <p class="dummy_text">The seedling stage is when young plants emerge and develop their leaves, laying the foundation for growth. Proper water, light, and nutrient management are crucial for healthy development.</p>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="client_box">
+                        <div class="client_img"><img src="static/images/cycle/vegetative.png"></div>
+                        <h2 class="looking_text">Vegetative</h2>
+                        <p class="dummy_text">In this stage plant focuses on developing its stems, leaves, and root system, which are essential for photosynthesis. This stage is crucial for plant’s overall health and productivity. </p>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="client_box">
+                        <div class="client_img"><img src="static/images/cycle/flowering.png"></div>
+                        <h2 class="looking_text">Flowering</h2>
+                        <p class="dummy_text">Flowering stage is when plants form flowers that will turn into fruits or seeds. The success of this stage determines the plant's ability to produce a healthy, bountiful harvest.</p>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="client_box">
+                        <div class="client_img"><img src="static/images/cycle/pod.png"></div>
+                        <h2 class="looking_text">Pod Formation</h2>
+                        <p class="dummy_text">Pod formation in crops like beans and peas is when flowers turn into seed-holding pods.Proper irrigation and nutrient management are vital for healthy, fully developed pods.</p>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="client_box">
+                        <div class="client_img"><img src="static/images/cycle/maturation.png"></div>
+                        <h2 class="looking_text">Maturation</h2>
+                        <p class="dummy_text">Maturation stage is when fruits or seeds fully develop and reach their final size and quality, ready for harvest. Proper timing is key to ensure the best yield and crop quality.</p>
+                     </div>
+                  </div>
+                     <div class="item">
+                        <div class="client_box">
+                           <div class="client_img"><img src="static/images/cycle/harvest.png"></div>
+                           <h2 class="looking_text">Harvest</h2>
+                           <p class="dummy_text">Harvesting is the final stage in the crop cycle,where mature crops are collected from the fields.The timing of the harvest is crucial,as it determines both the yield and quality of the produce.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- client section end -->
+      <!--
+      <div class="contact_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-12">
+                  <h1 class="contact_taital">Review</h1>
+               </div>
+            </div>
+         </div>
+         <div class="contact_section_2">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="mail_section map_form_container">
+                        <form action="">
+                           <div class="row">
+                              <div class="col-md-6">
+                                 <input type="text" class="mail_text" placeholder="Your Name" name="Your Name">
+                              </div>
+                              <div class="col-md-6">
+                                 <input type="text" class="mail_text" placeholder="Email" name="Email">
+                              </div>
+                              <div class="col-md-6">
+                                 <input type="text" class="mail_text" placeholder="Phone Number" name="Phone Number">
+                              </div>
+                              <div class="col-md-6">
+                                 <textarea class="massage-bt" placeholder="Message" rows="5" id="comment" name="Message"></textarea>
+                              </div>
+                           </div>
+                           <div class="btn_main">
+                              <div class="send_bt active"><a href="#">Send</a></div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      -->
+
+
+<!-- footer section start -->
+      <div class="footer_section layout_padding">
+         <div class="container">
+            <div class="footer_section_2">
+               <div class="row">
+                  <div class="col-lg-3 col-sm-6">
+                     <h2 class="useful_text">Contact Us</h2>
+                     <div class="location_text"><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left_15">Location</span></a></div>
+                     <div class="location_text"><a href="#"><i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left_15">(+91) 9878767564</span></a></div>
+                     <div class="location_text"><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left_15">fertix2024@gmail.com</span></a></div>
+                     <div class="social_icon">
+                        <ul>
+                           <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                           <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                           <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                           <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                     <h2 class="useful_text">Useful link </h2>
+                     <div class="footer_menu">
+                        <ul>
+                           <li class="active"><a href="/">Home</a></li>
+                           <li><a href="/about">About</a></li>
+                           <li><a href="/fertilizers">Fertilizers</a></li>
+                           <li><a href="/fert_predict">Fertilizer Predict</a></li>
+                           <li><a href="/crop_predict">Crop Predict</a></li>
+                           <li><a href="/crop">Crop Stages</a></li>
+
+                           <li><a href="/contact">Contact Us</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                     <h2 class="useful_text">About</h2>
+                     <p class="lorem_text">we provide farmers with the tools they need to make informed decisions, optimize resources, and grow healthier crops for a better future.                     </p>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                     <h2 class="useful_text">Subscribe</h2>
+                     <div class="form-group">
+                        <textarea class="update_mail" placeholder="Enter Your Email" rows="5" id="comments" name="Enter Your Email"></textarea>
+                        <div class="subscribe_bt"><a href="#">Subscribe</a></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- footer section end -->
+
+
+      <!-- copyright section start -->
+      <div class="copyright_section">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-12">
+                  <p class="copyright_text">2024 All Rights Reserved. Design by <a href="https://html.design">Fertix team.</a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- copyright section end -->
+      <!-- Javascript files-->
+      <!-- Javascript files-->
+      <script src="/static/js/jquery.min.js"></script>
+      <script src="/static/js/popper.min.js"></script>
+      <script src="/static/js/bootstrap.bundle.min.js"></script>
+      <script src="/static/js/jquery-3.0.0.min.js"></script>
+      <script src="/static/js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="/static/js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="/static/js/custom.js"></script>
+      <!-- javascript --> 
+      <script src="/static/js/owl.carousel.js"></script>
+
+      <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            const floatingIcon = document.getElementById('floatingIcon');
+            const chatPanel = document.getElementById('chatPanel');
+            const closeBtn = document.getElementById('closeBtn');
+            const sendBtn = document.getElementById('sendBtn');
+            const micBtn = document.getElementById('micBtn');
+            const chatInputText = document.getElementById('chatInputText');
+            const chatHistory = document.getElementById('chatHistory');
+
+            // Toggle chat panel visibility when the floating icon is clicked
+            floatingIcon.addEventListener('click', () => {
+                chatPanel.classList.toggle('show');
+            });
+
+            // Close chat panel
+            closeBtn.addEventListener('click', () => {
+                chatPanel.classList.remove('show');
+            });
+
+            // Handle sending message via text input
+            sendBtn.addEventListener('click', () => {
+                const userMessage = chatInputText.value.trim();
+                if (userMessage) {
+                    addMessage(userMessage, 'user');
+                    chatInputText.value = '';
+                    // Bot response logic can be added here
+                    addMessage("Hi, I am bot. How can I help you", 'bot');
+                }
+            });
+
+            // Voice input handling (dummy function here)
+            micBtn.addEventListener('click', () => {
+                addMessage("Voice input activated. Listening...", 'user');
+                // Here, you would trigger your voice-to-text functionality
+            });
+
+            // Add messages to chat history
+            function addMessage(message, sender) {
+                const messageBubble = document.createElement('div');
+                messageBubble.classList.add('chat-bubble');
+                if (sender === 'user') {
+                    messageBubble.classList.add('user-bubble');
+                }
+                messageBubble.innerText = message;
+                chatHistory.appendChild(messageBubble);
+                chatHistory.scrollTop = chatHistory.scrollHeight;
+            }
+          });
+
+
+      </script>
+
+
+      <script>
+         $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:35,
+            nav:true,
+            center: true,
+            responsive:{
+             0:{
+                 items:1,
+                    margin:0
+                  },
+                575:{
+                    items:1,
+                    margin:0
+                },
+                768:{
+                    items:3,
+                    margin:0
+                },
+                1000:{
+                    items:3
+                }
+            }
+         }) 
+         
+		function loadGoogleTranslate(){
+         new google.translate.TranslateElement("google_element");
+         }
+
+
+
+        // JavaScript to toggle the profile card visibility
+        const profileIcon = document.getElementById('profile-icon');
+        const profileCard = document.getElementById('profile-card');
+
+        profileIcon.addEventListener('click', () => {
+            profileCard.style.display = profileCard.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Close the card if clicked outside
+        window.addEventListener('click', function(e) {
+            if (!profileCard.contains(e.target) && !profileIcon.contains(e.target)) {
+                profileCard.style.display = 'none';
+            }
+        });
+
+        // Voice bot
+        const startButton = document.getElementById('start-btn');
+    const responseContainer = document.getElementById('response-container');
+
+    // Voice recognition setup
+    const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+    recognition.interimResults = false;
+    recognition.lang = 'en-US';
+
+    startButton.addEventListener('click', () => {
+        recognition.start();
+    });
+
+    recognition.addEventListener('result', (event) => {
+        const speechToText = Array.from(event.results)
+            .map(result => result[0].transcript)
+            .join('');
+
+        // Send the transcribed text to the backend
+        fetch('/voice-bot', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ input_text: speechToText }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Display the response from the bot
+            const responseText = data.response;
+            responseContainer.innerHTML = `<p><strong>Bot:</strong> ${responseText}</p>`;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    });
+
+      </script>
+
+   </body>
+</html>

@@ -1,0 +1,759 @@
+        /*--------------------------------------------------------------------- File Name: style.css ---------------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------------- import Fonts ---------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap');
+
+/*****---------------------------------------- 1) font-family: 'Rajdhani', sans-serif;
+ 2) font-family: 'Poppins', sans-serif;
+ ----------------------------------------*****/
+
+
+/*--------------------------------------------------------------------- import Files ---------------------------------------------------------------------*/
+
+@import url(animate.min.css);
+@import url(normalize.css);
+@import url(icomoon.css);
+@import url(font-awesome.min.css);
+@import url(meanmenu.css);
+@import url(owl.carousel.min.css);
+@import url(swiper.min.css);
+@import url(slick.css);
+@import url(jquery.fancybox.min.css);
+@import url(jquery-ui.css);
+@import url(nice-select.css);
+
+/*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
+
+* {
+     box-sizing: border-box !important;
+}
+
+html {
+     scroll-behavior: smooth;
+}
+
+body {
+     color: #666666;
+     font-size: 14px;
+     font-family: 'Lato', sans-serif;
+     line-height: 1.80857;
+     font-weight: normal;
+}
+
+a {
+     color: #1f1f1f;
+     text-decoration: none !important;
+     outline: none !important;
+     -webkit-transition: all .3s ease-in-out;
+     -moz-transition: all .3s ease-in-out;
+     -ms-transition: all .3s ease-in-out;
+     -o-transition: all .3s ease-in-out;
+     transition: all .3s ease-in-out;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+     letter-spacing: 0;
+     font-weight: normal;
+     position: relative;
+     padding: 0 0 10px 0;
+     font-weight: normal;
+     line-height: normal;
+     color: #111111;
+     margin: 0
+}
+
+h1 {
+     font-size: 24px;
+}
+
+h2 {
+     font-size: 22px;
+}
+
+h3 {
+     font-size: 18px;
+}
+
+h4 {
+     font-size: 16px
+}
+
+h5 {
+     font-size: 14px
+}
+
+h6 {
+     font-size: 13px
+}
+
+*,
+*::after,
+*::before {
+     -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     box-sizing: border-box;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+     color: #212121;
+     text-decoration: none!important;
+     opacity: 1
+}
+
+button:focus {
+     outline: none;
+}
+
+ul,
+li,
+ol {
+     margin: 0px;
+     padding: 0px;
+     list-style: none;
+}
+
+p {
+     margin: 0px;
+     font-weight: 500;
+     font-size: 15px;
+     line-height: 24px;
+}
+
+a {
+     color: #222222;
+     text-decoration: none;
+     outline: none !important;
+}
+
+a,
+.btn {
+     text-decoration: none !important;
+     outline: none !important;
+     -webkit-transition: all .3s ease-in-out;
+     -moz-transition: all .3s ease-in-out;
+     -ms-transition: all .3s ease-in-out;
+     -o-transition: all .3s ease-in-out;
+     transition: all .3s ease-in-out;
+}
+
+img {
+     max-width: 100%;
+     height: auto;
+}
+
+ :focus {
+     outline: 0;
+}
+
+.btn-custom {
+     margin-top: 20px;
+     background-color: transparent !important;
+     border: 2px solid #ddd;
+     padding: 12px 40px;
+     font-size: 16px;
+}
+
+.lead {
+     font-size: 18px;
+     line-height: 30px;
+     color: #767676;
+     margin: 0;
+     padding: 0;
+}
+
+.form-control:focus {
+     border-color: #ffffff !important;
+     box-shadow: 0 0 0 .2rem rgba(255, 255, 255, .25);
+}
+
+
+.form-control:focus {
+     border-color: #ffffff !important;
+     box-shadow: 0 0 0 .2rem rgba(255, 255, 255, .25);
+}
+
+.navbar-form input {
+     border: none !important;
+}
+
+.badge {
+     font-weight: 500;
+}
+
+blockquote {
+     margin: 20px 0 20px;
+     padding: 30px;
+}
+
+button {
+     border: 0;
+     margin: 0;
+     padding: 0;
+     cursor: pointer;
+}
+
+.full {
+     float: left;
+     width: 100%;
+}
+
+.layout_padding {
+     padding-top: 90px;
+     padding-bottom: 90px;
+}
+
+.layout_padding_2 {
+     padding-top: 75px;
+     padding-bottom: 75px;
+}
+
+.light_silver {
+     background: #f9f9f9;
+}
+
+.theme_bg {
+     background: #38c8a8;
+}
+
+.margin_top_30 {
+     margin-top: 30px !important;
+}
+
+.full {
+     width: 100%;
+     float: left;
+     margin: 0;
+     padding: 0;
+}
+
+
+/*-- heading section --*/
+
+
+/*---------------------------- preloader area ----------------------------*/
+h1 {
+     font-size: 0px; /* Increased from 200px to 250px */
+     color: #090807;
+     line-height: 62px;
+     font-weight: bold;
+     padding-top: 0;
+     font-family: "Times New Roman", Times, serif; /* Times New Roman font */
+ }
+ 
+.header_section {
+     width: 100%;
+     z-index: 1;
+     float: left;
+     background-image: url(../images/agro.jpg);
+     background-size: cover;
+     background-repeat: no-repeat;
+     height: 1px auto;
+     position: relative;
+ }
+ 
+ .year_section {
+     position: relative;
+     z-index: 3; /* Ensure it is above the background image */
+     padding: 10px 0; /* Add some padding to give space */
+ }
+ 
+ .year_section_2 {
+     position: relative;
+     z-index: 4; /* Higher z-index to make it appear above the image */
+     background-color: rgba(255, 255, 255, 0.8); /* Optional: add a semi-transparent background to the box */
+     padding: 20px; /* Padding inside the box */
+     border-radius: 10px; /* Optional: rounded corners */
+ }
+ 
+ .year_taital {
+     font-size: 24px;
+     color: #333; /* Text color */
+     text-align: center;
+ }
+ 
+ .bg-light {
+     background-color: transparent !important;
+ }
+ 
+ .logo img {
+     width: 150px; /* Adjust size as needed */
+     height: auto; /* Maintains aspect ratio */
+     background-color: transparent; /* Ensure no background color */
+     border-radius: 2px; /* Optional: adds slight rounded corners */
+ }
+ 
+ /* Optional: Add a hover effect */
+ .logo img:hover {
+     transform: scale(1.05); /* Slight zoom effect on hover */
+     transition: transform 0.3s ease-in-out;
+ }
+ 
+ .ml-auto,
+ .mx-auto {
+     margin-left: auto!important;
+ }
+ 
+ 
+ .navbar-expand-lg .navbar-nav .nav-link {
+     padding-right: 20px;
+     padding-left: 20px;
+     font-size: 18px;
+     color:#77a01d;
+     background-color: transparent;
+     margin-left: 10px;
+ }
+ 
+ .navbar-light .navbar-nav .nav-link:focus,
+ .navbar-light .navbar-nav .nav-link:hover {
+     color:#fefefd ;
+     background-color: #77a01d;
+ }
+ 
+ .navbar-light .navbar-nav .active>.nav-link,
+ .navbar-light .navbar-nav .nav-link.active,
+ .navbar-light .navbar-nav .nav-link.show,
+ .navbar-light .navbar-nav .show>.nav-link {
+     color: #fefefd;
+     background-color:#77a01d ;
+ }
+ 
+ .navbar {
+     padding: 30px 0px 30px 0px;
+ }
+ /* Dropdown menu container */
+ .navbar .dropdown-menu {
+     background-color: #f8f9fa; /* Light gray background */
+     border: 1px solid #ddd; /* Light border */
+     border-radius: 5px; /* Rounded corners */
+     padding: 10px 0; /* Padding for the dropdown items */
+     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+ }
+ 
+ /* Dropdown menu items */
+ .navbar .dropdown-menu .dropdown-item {
+     font-size: 18px; /* Font size */
+     color: #333; /* Text color */
+     padding: 10px 20px; /* Padding for each item */
+     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+ }
+ 
+ /* Hover effect for dropdown items */
+ .navbar .dropdown-menu .dropdown-item:hover {
+     background-color: rgb(85, 128, 42); /* Blue background on hover */
+     color: #77a01d; /* White text on hover */
+     border-radius: 8px; /* Slight rounding for the hover effect */
+ }
+ 
+ /* Hover effect for dropdown container */
+ .navbar .dropdown:hover .dropdown-menu {
+     display: block;
+     opacity: 1;
+     visibility: visible;
+     transition: opacity 0.3s ease;
+ }
+ 
+ /* For better alignment and positioning */
+ .navbar .dropdown-menu .dropdown-item {
+     display: block;
+     width: 100%;
+     white-space: nowrap;
+ }
+
+
+/** banner section **/
+
+     .banner_main {
+          background: url(https://images.moneycontrol.com/static-mcnews/2022/08/sreehari-devadas-WDI95CIPW00-unsplash.jpg?impolicy=website&width=1600&height=900);
+          background-repeat: no-repeat;
+          min-height: 840px;
+          background-size: 100% 100%;
+          display: flex;
+          justify-content: center;
+          align-content: center;
+          align-items: center;
+     }
+
+
+.text-bg {
+     text-align: center;
+}
+
+.text-bg h1 {
+     text-transform: uppercase;
+     color: #fff;
+     font-size: 110px;
+     line-height: 120px;
+     padding-bottom: 15px;
+     font-weight: bold;
+}
+
+.text-bg p {
+     font-size: 17px;
+     color: #fff;
+     line-height: 28px;
+     font-weight: 500;
+     padding-bottom: 50px;
+     display: block;
+}
+
+.text-bg a {
+     font-size: 17px;
+     background-color: transparent;
+     color: #fff;
+     font-weight: 600;
+     padding: 11px 0px;
+     width: 100%;
+     max-width: 230px;
+     text-align: center;
+     display: inline-block;
+     border-radius: 30px;
+     border: #77a01d solid 4px;
+     transition: ease-in all 0.5s;
+}
+
+.text-bg a:hover {
+     background-color: #13110e;
+     color: #fff;
+     transition: ease-in all 0.5s;
+}
+
+/** end banner section **/
+
+.titlepage {
+     text-align: center;
+     padding-bottom: 60px;
+     
+}
+
+.titlepage h2 {
+     font-size: 50px;
+     color: #090807;
+     line-height: 62px;
+     font-weight: bold;
+     padding: 0;}
+
+.d_flex {
+     display: flex;
+     align-items: center;
+     flex-wrap: wrap;
+}
+
+.blu {
+     color: #0808ff;
+}
+
+.read_more {
+     font-size: 17px;
+     background-color: #77a01d;
+     color: #fff;
+     padding: 13px 0px;
+     width: 100%;
+     max-width: 190px;
+     text-align: center;
+     display: inline-block;
+     transition: ease-in all 0.5s;
+     z-index: 9999;
+     position: relative;
+     font-weight: 500;
+}
+
+.read_more:hover {
+     background: #fff;
+     color: #000;
+     transition: ease-in all 0.5s;
+}
+
+
+/** three_box section **/
+
+.three_box {
+     margin-top: -160px;
+}
+
+.box_text {
+     box-shadow: 0 0 95px rgba(13, 3, 3, 0.56);
+}
+
+.box_text figure {
+     margin: 0;
+}
+
+.box_text figure img {
+     width: 100%;
+}
+
+
+/** end three_box section **/
+
+
+/** hottest section **/
+
+.hottest {
+     background: #fff;
+     padding: 90px 0 0px 0;
+}
+
+.hottest .titlepage {
+     padding-bottom: 0;
+     text-align: left;
+}
+
+.hottest .titlepage h2 {
+     color: #000;
+     opacity: 0; /* Initially hidden */
+     animation: fadeInUp 2s ease-in-out forwards;
+     font-size: 50px;
+}
+.hottest .hottest_box p{
+     animation: fadeInUp 2s ease-in-out forwards; /* Fade and slide animation */
+    animation-delay: 0.5s;
+}
+.hottest .hottest_box  {
+     position: relative;
+     background-color: #77a01d;
+     padding: 60px 40px;
+}
+
+
+.hottest .hottest_box::after {
+     position: absolute;
+     content: "";
+     top: 0;
+     bottom: 0;
+     left: -30px;
+     width: 31px;
+     height: 100%;
+     background: url(../images/h_cross.png);
+     background-repeat: no-repeat;
+     display: block;
+     background-position: center center;
+}
+
+.hottest .hottest_box p {
+     color: #fff;
+     font-size: 20px;
+     line-height: 32px;
+     font-weight: 500;
+}
+/* Animation Keyframes */
+@keyframes fadeInUp {
+     0% {
+         opacity: 0;
+         transform: translateY(30px); /* Slide up from 30px below */
+     }
+     100% {
+         opacity: 1;
+         transform: translateY(0); /* No movement */
+     }
+ }
+
+
+/** end hottest section **/
+
+
+/** choose  section **/
+
+.choose {
+     margin-top: 90px;
+     background-color: #242323;
+     padding: 90px 0 190px 0;
+     position: relative;
+}
+
+.choose::after {
+     position: absolute;
+     content: "";
+     bottom: 0;
+     left: 0px;
+     width: 100%;
+     height: 195px;
+     background: url(../images/choose_bottom_cross.png);
+     background-repeat: no-repeat;
+     display: block;
+     background-position: center center;
+}
+
+.choose .titlepage {
+     text-align: left;
+     padding-bottom: 0;
+}
+
+.choose .titlepage h2 {
+     color: #fff;
+     padding-bottom: 20px;
+
+}
+
+.choose .titlepage p {
+     color: #fff;
+     display: block;
+     font-size: 17px;
+     padding-top: 20px;
+     line-height: 32px;
+}
+
+.choose_img {
+     background-color: #fff;
+     padding: 20px;
+     margin-left: 30px;
+     margin-right: 40px;
+}
+
+.choose_img figure {
+     margin: 0;
+     margin-left: -50px;
+}
+
+.choose_img figure img {
+     width: 100%;
+}
+
+.padding_with {
+     max-width: 653px;
+     float: right;
+     width: 100%;
+}
+
+.choose_box {
+     display: flex;
+}
+
+.choose_box i {
+     float: left;
+}
+
+.choose_box i img {
+     float: left;
+     background-color: #77a01d;
+     width: 350px;
+     padding: 10px;
+     border-radius: 60px;
+}
+
+.choose_text {
+     float: right;
+     padding-left: 20px;
+}
+
+.choose_text h3 {
+     color: #fff;
+     font-size: 20px;
+     line-height: 28px;
+     font-weight: 600;
+     padding-bottom: 20px;
+}
+
+.choose_text p {
+     color: #fff;
+     font-size: 17px;
+     line-height: 30px;
+     padding-bottom: 25px;
+
+}
+
+
+/** end choose  section **/
+
+/** end product  section **/
+
+
+/** about section **/
+
+.about {
+     padding: 60px 0px 140px 0px;
+     background: #fff;
+}
+
+.about .titlepage p {
+     color: #141629;
+     line-height: 28px;
+     font-weight: 500;
+     font-size: 25px;
+     padding-top: 20px;
+}
+
+.about_Carousel .carousel-caption {
+     position: inherit;
+     padding: 0;
+     padding-top: 65px;
+}
+
+.about_box {
+     text-align: center;
+}
+
+.test_box {
+     padding: 30px 40px 40px 42px;
+     background: url(../images/te.png);
+     background-repeat: no-repeat;
+     background-size: 100% 100%;
+     min-height: 367px;
+}
+
+.about_Carousel .test_box h4 {
+     font-size: 30px;
+     color: #1d1c1c;
+     line-height: 18px;
+     display: block;
+     text-align: center;
+     text-transform: uppercase;
+     font-weight: 600;
+     padding: 23px 0px 0px 0px;
+     text-align: left;
+}
+
+.about_Carousel .test_box i {
+     text-align: left;
+     float: left;
+     margin-bottom: -12px;
+     margin-right: 20px;
+     margin-top: -91px;
+     box-shadow: #ddd 0px 0px 10px 0px;
+     border-radius: 122px;
+}
+
+.about_Carousel .test_box p {
+     font-size: 19px;
+     line-height: 28px;
+     color: #fff;
+     text-align: left;
+     padding-left: 100px;
+     margin-top: 45px;
+}
+
+.about_Carousel .carousel-indicators {
+     bottom: -50px;
+}
+
+.about_Carousel .carousel-indicators li {
+     width: 56px;
+     height: 15px;
+     border-radius: 20px;
+     background:#77a01d;
+}
+
+.about_Carousel .carousel-indicators li.active {
+     background: #040403;
+}
+
+#myCarousel .carousel-control-next-icon,
+#myCarousel .carousel-control-prev-icon {
+     display: none;
+}
+
+
+/** end about section **/

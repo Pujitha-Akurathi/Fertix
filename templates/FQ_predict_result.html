@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fertilizer Prediction Result</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p6eN3mZZYpH/7QxKJ5XHvHXlB4vWKTKcF/Q6xPF+5K9c7nU6K0NnZ1vWJY2WpqZrZ5eV2HhfCajE8Vx0E0vCgw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            overflow: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Background Styling */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            overflow: hidden;
+            z-index: -2;
+        }
+
+        .background-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.6);
+            z-index: -1;
+        }
+
+        /* Floating Icons */
+        .floating-icons i {
+            position: absolute;
+            font-size: 2rem;
+            color: rgba(255, 255, 255, 0.8);
+            animation: float 20s linear infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-1000px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Positioning Floating Icons */
+        .floating-icons i:nth-child(1) {
+            left: 10%;
+            top: 80%;
+            animation-delay: 0s;
+            animation-duration: 25s;
+        }
+
+        .floating-icons i:nth-child(2) {
+            left: 30%;
+            top: 70%;
+            animation-delay: 5s;
+            animation-duration: 20s;
+        }
+
+        .floating-icons i:nth-child(3) {
+            left: 50%;
+            top: 60%;
+            animation-delay: 10s;
+            animation-duration: 22s;
+        }
+
+        .floating-icons i:nth-child(4) {
+            left: 70%;
+            top: 50%;
+            animation-delay: 15s;
+            animation-duration: 24s;
+        }
+
+        .floating-icons i:nth-child(5) {
+            left: 90%;
+            top: 40%;
+            animation-delay: 20s;
+            animation-duration: 26s;
+        }
+
+        /* Back Button */
+        /* Back Button */
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #2196F3;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 10; /* Ensures the button is on top */
+}
+
+.back-btn:hover {
+    background-color: #1976D2;
+    transform: translateY(-2px);
+}
+
+
+        /* Container */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Header */
+        .header {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .header i {
+            color: #27ae60;
+            animation: rotateIcon 4s linear infinite;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes rotateIcon {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Result Card */
+        .result-card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 800px;
+            animation: slideUp 1s ease-out;
+        }
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .result-details p {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .result-details strong {
+            color: #27ae60;
+        }
+
+        /* Chart */
+        .result-chart {
+            width: 100%;
+            height: 300px;
+            margin-top: 2rem;
+            position: relative;
+        }
+
+        /* Buttons */
+        .button-container {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            background-color: #27ae60;
+            color: #fff;
+            padding: 0.8rem 1.6rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .btn:hover {
+            background-color: #1e8449;
+            transform: translateY(-2px);
+        }
+
+        .btn i {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header {
+                font-size: 2.5rem;
+            }
+
+            .result-details p {
+                font-size: 1.1rem;
+            }
+
+            .btn {
+                font-size: 0.9rem;
+                padding: 0.6rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background with Floating Icons -->
+    <div class="background">
+        <div class="background-overlay"></div>
+        <div class="floating-icons">
+            <i class="fas fa-leaf"></i>
+            <i class="fas fa-seedling"></i>
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-cloud"></i>
+            <i class="fas fa-raindrops"></i>
+        </div>
+    </div>
+    <!-- Back Button -->
+    <a href="/" class="back-btn">
+        Go Back
+    </a>
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            Fertilizer Prediction Result
+            <i class="fas fa-seedling fa-2x"></i>
+        </div>
+        <!-- Result Card -->
+        <div id="result-card">
+            <div class="result-details">
+                <p><strong>Predicted Fertilizer Name:</strong> {{ f_name }}</p>
+                <p><strong>Predicted Fertilizer Quantity:</strong> {{ f_quantity }} kg</p>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="button-container">
+            <a href="/fert_predict" class="btn" id="make-prediction-btn">
+                Make Another Prediction <i class="fas fa-rocket"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- React and ReactDOM via CDN -->
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+    <!-- React Spring for Animations -->
+    <script src="https://unpkg.com/react-spring@9.4.5/dist/react-spring.umd.js"></script>
+    <!-- Babel for JSX Transformation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- React Component -->
+    <script type="text/babel">
+        const { useSpring, animated } = window['react-spring'];
+
+        // Simulated server-side variables
+        const fertilizerName = "{{ f_name }}"; // Replace with actual server-side variable
+        const fertilizerQuantity = "{{ f_quantity }}"; // Replace with actual server-side variable
+
+        const ResultCard = () => {
+            const props = useSpring({
+                opacity: 1,
+                transform: 'translateY(0)',
+                from: { opacity: 0, transform: 'translateY(50px)' },
+                config: { tension: 170, friction: 26 }
+            });
+
+            return (
+                <animated.div style={props} className="result-card">
+                    <h2>Predicted Fertilizer Details</h2>
+                    <div className="result-details">
+                        <p><strong>Fertilizer Name:</strong> {fertilizerName}</p>
+                        <p><strong>Quantity:</strong> {fertilizerQuantity} kg</p>
+                    </div>
+                    <div className="result-chart">
+                        {/* Placeholder for Chart - You can integrate a chart library like Chart.js or D3.js here */}
+                        <svg width="100%" height="100%">
+                            <rect x="10" y="220" width="100" height={fertilizerQuantity * 2} fill="#27ae60" rx="5" />
+                            <text x="60" y="250" fill="#fff" fontSize="16" textAnchor="middle">{fertilizerQuantity} kg</text>
+                        </svg>
+                    </div>
+                </animated.div>
+            );
+        };
+
+        // Render the React component
+        ReactDOM.render(<ResultCard />, document.getElementById('result-card'));
+
+        // Handle "Make Another Prediction" Button Click
+        document.getElementById('make-prediction-btn').addEventListener('click', (e) => {
+            e.preventDefault();
+            // Redirect to the prediction page or reset the form
+            window.location.href = "{{ url_for('fert_predict') }}"; // Replace with actual URL
+        });
+    </script>
+</body>
+</html>

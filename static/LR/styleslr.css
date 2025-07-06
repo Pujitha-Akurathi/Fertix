@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+:root{
+  --pink:#FF046F;
+  --violet:#C63BFA;
+  --black:#000000;
+}
+
+*{
+  font-family: 'Roboto', sans-serif;
+  text-transform: capitalize;
+  text-decoration: none;
+  outline: none;
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+}
+
+*::selection{
+  background:var(--pink);
+  color:#fff;
+}
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title-about {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.name {
+  font-size:25px;
+}
+
+.level {
+  font-size:25px;
+}
+
+.qu{
+  font-size:20px;
+}
+
+.mail{
+  font-size:20px;
+}
+
+/** catagary.html table css code start**/
+
+
+#table{
+  width:100%;
+  text-align: center;
+  position: relative;
+  margin:auto;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  padding:0px;
+}
+table td{
+  padding:20px;
+}
+
+.div1{
+  background-color: #fff;
+  padding:20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px 2px rgb(17, 199, 4);
+  transition: 0.5s;
+}
+.div1:hover{
+  transform:scale(0.9);
+  box-shadow:0px 0px 5px 7px rgb(4, 199, 82);
+  transition: 0.3s;
+}
+.btn{
+  padding:5px 15px 5px 15px;
+  border-radius: 20px 4px 20px 4px;
+  border:none;
+  color:white;
+}
+.btn1{
+ background-color:#2f5597;
+}
+.btn2{
+  background-color:#11c511;
+}
+.btn3{
+  background-color:#00b050;
+}
+.btn4{
+  background-color:#30a044;
+}
+p{
+   font-size:15px;
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   font-weight:bold;
+}
+
+
+
+/**corse detals css**/
+
+.image-D{
+  width: 60rem;
+  height: 110rem;
+
+}
