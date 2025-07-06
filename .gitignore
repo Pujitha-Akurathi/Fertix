@@ -6,3 +6,5 @@ __pycache__/
 .idea/
 *.pyc
 static/images/com2.jpg
+static/images/track2.mp4
+.venv
