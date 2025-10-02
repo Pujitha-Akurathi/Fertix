@@ -8,7 +8,7 @@ Fertix is an AI-powered project developed as part of **Smart India Hackathon 202
 
 ## 📌 Features  
 - 🔍 **AI-based Recommendation Engine** – Suggests suitable fertilizers and crops by analyzing **soil & weather datasets**.  
-- 💬 **Multilingual Chatbot** – NLP-based chatbot offering personalized farming support in multiple languages.  
+- 💬 **Chatbot** – NLP-based chatbot offering personalized farming support in multiple languages.  
 - ⚡ **Flask APIs + MySQL** – Backend APIs integrated with database for real-time recommendations.  
 - 🌐 **Farmer-Friendly Interface** – Easy-to-use interface with interactive support.  
 - 🌎 **Sustainability Focus** – Encourages eco-friendly practices by reducing fertilizer overuse.  
@@ -18,14 +18,14 @@ Fertix is an AI-powered project developed as part of **Smart India Hackathon 202
 ## 🛠️ Tech Stack  
 - **Programming Languages:** Python, SQL, JavaScript  
 - **Backend:** Flask, MySQL  
-- **Frontend:** HTML, CSS, React.js (basic interface)  
+- **Frontend:** HTML, CSS, JavaScript 
 - **AI/ML:** Scikit-learn, NLP models  
-- **Other Tools:** Pandas, NumPy, Power BI (for visualization)  
+- **Other Tools:** Pandas, NumPy
 
 ---
 
 ## 📂 Project Structure  
-
+```
 Fertix/
 │── backend/
 │   ├── app.py             # Flask API
@@ -35,12 +35,12 @@ Fertix/
 │   ├── index.html
 │   ├── static/            # CSS, JS files
 │── chatbot/
-│   ├── nlp_chatbot.py     # Multilingual Chatbot
+│   ├── nlp_chatbot.py     # Chatbot
 │── datasets/
 │   ├── soil_data.csv
 │   ├── weather_data.csv
 │── README.md
-
+```
 
 ---
 
@@ -52,36 +52,36 @@ Fertix/
    cd fertix
 2. Backend Setup
 
-```bash
-cd backend
-pip install -r requirements.txt
-python app.py
-```
+  ```bash
+  cd backend
+  pip install -r requirements.txt
+  python app.py
+  ```
 3. Frontend Setup
 
-Open index.html in browser
+  Open index.html in browser
 
-Or serve with a simple server:
+  Or serve with a simple server:
 
-```bash
-python -m http.server 8000
-```
+  ```bash
+  python -m http.server 8000
+  ```
 4. Chatbot Setup
 
-```bash
-Copy code
-cd chatbot
-python nlp_chatbot.py
-```
+  ```bash
+  cd chatbot
+  python nlp_chatbot.py
+  ```
 ---
+
 ## 📊 Results
-✅ Optimized fertilizer usage by recommending the right combination of fertilizers.
+  ✅ Optimized fertilizer usage by recommending the right combination of fertilizers.
 
-✅ Improved crop yield predictions using AI models.
+  ✅ Improved crop yield predictions using AI models.
 
-✅ Enhanced farmer support via real-time multilingual chatbot.
+  ✅ Enhanced farmer support via real-time chatbot.
 
 ---
 
 ## 👩‍💻 Team
-Developed as part of Smart India Hackathon 2024 by Team Fertix.
+  Developed as part of Smart India Hackathon 2024 by Team Fertix.
