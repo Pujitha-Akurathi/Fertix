@@ -2,7 +2,7 @@
 
 Fertix is an AI-powered project developed as part of **Smart India Hackathon 2024 (College Level)**. The system helps farmers optimize fertilizer usage for higher yield while promoting sustainable farming practices.  
 
-🔗 [View Project Report / Documentation](https://drive.google.com/file/d/1en1VvrP5dG7w_7X0ZEKKc0kshjSmNX8_/view?usp=sharing)
+🔗 [View Project Demo](https://drive.google.com/file/d/1en1VvrP5dG7w_7X0ZEKKc0kshjSmNX8_/view?usp=sharing)
 
 ---
 
